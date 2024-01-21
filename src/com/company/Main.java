@@ -31,5 +31,12 @@ public class Main {
         // для убирания \n из строки используют [^\n] unix [^\r\n] windows
         // можно по другому использовать условие
         // "\"[^\r\n]\""
+
+        // слова в пробелах
+        Pattern p3 = Pattern.compile("\\bis\\b");
+        Matcher m3 = p3.matcher("This island is good");
+        while (m3.find()){
+            System.out.println(m3.start() +" "+ m3.group()+" ");
+        }
     }
 }
